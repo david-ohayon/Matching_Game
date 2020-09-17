@@ -142,18 +142,16 @@ namespace Matching_Game
                 playBtn.Visible = true;
                 quitBtn.Visible = true;
 
-                matchingTableLayoutPanel.Enabled = false;
-
                 foreach (Control control in matchingTableLayoutPanel.Controls)
                     if (control is Label iconLabel)
                         iconLabel.Text = "c";
+
+                matchingTableLayoutPanel.Enabled = false;
             }
         }
 
         private void startGame(object sender, EventArgs e)
         {
-            LoadCustomFont();
-
             matchingTableLayoutPanel.Enabled = true;
 
             icons = new List<string>()
@@ -163,7 +161,7 @@ namespace Matching_Game
             };
             AssignIconsToSquares();
 
-            timeLeft = 5;
+            timeLeft = 50;
             timeLabel.Text = "50 seconds";
             countdownTimer.Start();
 

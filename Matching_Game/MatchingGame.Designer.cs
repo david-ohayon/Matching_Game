@@ -385,6 +385,7 @@
             this.Controls.Add(this.matchingTablePanel);
             this.Controls.Add(this.timeLabelPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(900, 900);
             this.Name = "MatchingGame";
             this.Text = "Matching Game";
             this.matchingTableLayoutPanel.ResumeLayout(false);
