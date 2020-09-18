@@ -152,14 +152,14 @@ namespace Matching_Game
 
         private void startGame(object sender, EventArgs e)
         {
-            matchingTableLayoutPanel.Enabled = true;
-
             icons = new List<string>()
             {
                 "!", "!", "V", "V", ",", ",", "~", "~",
                 "b", "b", "v", "v", "w", "w", "z", "z"
             };
             AssignIconsToSquares();
+
+            matchingTableLayoutPanel.Enabled = true;
 
             timeLeft = 50;
             timeLabel.Text = "50 seconds";

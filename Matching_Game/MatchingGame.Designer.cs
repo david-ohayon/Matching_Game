@@ -305,7 +305,7 @@
             // 
             // choiceTimer
             // 
-            this.choiceTimer.Interval = 500;
+            this.choiceTimer.Interval = 650;
             this.choiceTimer.Tick += new System.EventHandler(this.choiceTimer_Tick);
             // 
             // timeLabel
