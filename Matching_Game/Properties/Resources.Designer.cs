@@ -69,15 +69,5 @@ namespace Matching_Game.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] Atari_Classic {
-            get {
-                object obj = ResourceManager.GetObject("Atari_Classic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

@@ -305,13 +305,13 @@
             // 
             // choiceTimer
             // 
-            this.choiceTimer.Interval = 500;
+            this.choiceTimer.Interval = 600;
             this.choiceTimer.Tick += new System.EventHandler(this.choiceTimer_Tick);
             // 
             // timeLabel
             // 
             this.timeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Font = new System.Drawing.Font("Atari Classic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.ForeColor = System.Drawing.Color.White;
             this.timeLabel.Location = new System.Drawing.Point(0, 0);
             this.timeLabel.Name = "timeLabel";
@@ -338,6 +338,7 @@
             this.quitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(78)))));
             this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quitBtn.Font = new System.Drawing.Font("Atari Classic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitBtn.ForeColor = System.Drawing.Color.White;
             this.quitBtn.Location = new System.Drawing.Point(899, 12);
             this.quitBtn.Name = "quitBtn";
@@ -352,6 +353,7 @@
             // 
             this.playBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(78)))));
             this.playBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playBtn.Font = new System.Drawing.Font("Atari Classic", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playBtn.ForeColor = System.Drawing.Color.White;
             this.playBtn.Location = new System.Drawing.Point(12, 12);
             this.playBtn.Name = "playBtn";
