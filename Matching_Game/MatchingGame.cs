@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace Matching_Game
 {
     public partial class MatchingGame : Form
     {
+        private readonly PrivateFontCollection pfc = new PrivateFontCollection();
         private readonly Random random = new Random();
         private List<string> icons;
 
@@ -18,6 +20,16 @@ namespace Matching_Game
         public MatchingGame()
         {
             InitializeComponent();
+
+            LoadCustomFont();
+        }
+
+        private void LoadCustomFont()
+        {
+            pfc.AddFontFile(@"..\..\Resources\AtariClassic.ttf");
+            timeLabel.Font = new Font(pfc.Families[0], timeLabel.Font.Size);
+            playBtn.Font = new Font(pfc.Families[0], playBtn.Font.Size);
+            quitBtn.Font = new Font(pfc.Families[0], quitBtn.Font.Size);
         }
 
         private void AssignIconsToSquares()
