@@ -1,2 +1,2 @@
-# Matching_Game
+# Matching Game
 Matching Game made with Winforms
