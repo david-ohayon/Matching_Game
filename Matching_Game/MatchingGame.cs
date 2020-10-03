@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Matching_Game
@@ -69,7 +70,7 @@ namespace Matching_Game
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.White;
 
-                CheckForWinner();
+                CheckForWinnerAsync();
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
@@ -93,7 +94,7 @@ namespace Matching_Game
             secondClicked = null;
         }
 
-        private void CheckForWinner()
+        private async void CheckForWinnerAsync()
         {
             foreach (Control control in matchingTableLayoutPanel.Controls)
             {
@@ -106,6 +107,7 @@ namespace Matching_Game
 
             countdownTimer.Stop();
             timeLabel.Text = "You won!";
+            await Task.Delay(750);
             playBtn.Visible = true;
             quitBtn.Visible = true;
 
