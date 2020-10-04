@@ -9,6 +9,7 @@ namespace Matching_Game
 {
     public partial class MatchingGame : Form
     {
+        // variables
         private readonly PrivateFontCollection pfc = new PrivateFontCollection();
         private readonly Random random = new Random();
         private List<string> icons;
@@ -18,6 +19,7 @@ namespace Matching_Game
 
         private int timeLeft;
 
+        // ctor
         public MatchingGame()
         {
             InitializeComponent();
@@ -25,14 +27,15 @@ namespace Matching_Game
             LoadCustomFont();
         }
 
+        // load of custom atari looking font
         private void LoadCustomFont()
         {
             pfc.AddFontFile(@"..\..\Resources\AtariClassic.ttf");
             timeLabel.Font = new Font(pfc.Families[0], timeLabel.Font.Size);
-            playBtn.Font = new Font(pfc.Families[0], playBtn.Font.Size);
             quitBtn.Font = new Font(pfc.Families[0], quitBtn.Font.Size);
         }
 
+        // assign a random icon to a random card
         private void AssignIconsToSquares()
         {
             foreach (Control control in matchingTableLayoutPanel.Controls)
@@ -47,6 +50,7 @@ namespace Matching_Game
             }
         }
 
+        // game logic
         private void label_Click(object sender, EventArgs e)
         {
             if (choiceTimer.Enabled == true)
@@ -70,7 +74,7 @@ namespace Matching_Game
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.White;
 
-                CheckForWinnerAsync();
+                CheckForWinner();
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
@@ -82,7 +86,6 @@ namespace Matching_Game
                 choiceTimer.Start();
             }
         }
-
         private void choiceTimer_Tick(object sender, EventArgs e)
         {
             choiceTimer.Stop();
@@ -94,7 +97,8 @@ namespace Matching_Game
             secondClicked = null;
         }
 
-        private async void CheckForWinnerAsync()
+        // lose or win check
+        private async void CheckForWinner()
         {
             foreach (Control control in matchingTableLayoutPanel.Controls)
             {
@@ -108,16 +112,16 @@ namespace Matching_Game
             countdownTimer.Stop();
             timeLabel.Text = "You won!";
             await Task.Delay(750);
-            playBtn.Visible = true;
+            //playBtn.Visible = true;
             quitBtn.Visible = true;
 
-            foreach (Control control in matchingTableLayoutPanel.Controls)
-                if (control is Label iconLabel)
-                    iconLabel.Text = "c";
+            //foreach (Control control in matchingTableLayoutPanel.Controls)
+            //if (control is Label iconLabel)
+            //iconLabel.Text = "";
 
             matchingTableLayoutPanel.Enabled = false;
+            gameOverPanel.BringToFront();
         }
-
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0)
@@ -129,17 +133,23 @@ namespace Matching_Game
             {
                 countdownTimer.Stop();
                 timeLabel.Text = "Time's up!";
-                playBtn.Visible = true;
+                //playBtn.Visible = true;
                 quitBtn.Visible = true;
 
-                foreach (Control control in matchingTableLayoutPanel.Controls)
-                    if (control is Label iconLabel)
-                        iconLabel.Text = "c";
+                //foreach (Control control in matchingTableLayoutPanel.Controls)
+                //if (control is Label iconLabel)
+                //iconLabel.Text = "";
 
                 matchingTableLayoutPanel.Enabled = false;
+                gameOverPanel.BringToFront();
+                gameOverPanel.BackColor = Color.FromArgb(125, Color.Red);
+                // must do else cant see opacity change of gameoverPanel
+                matchingTablePanel.BackgroundImage = Properties.Resources.matchingTable;
+                matchingTablePanel.BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
 
+        // start and quit
         private void startGame(object sender, EventArgs e)
         {
             icons = new List<string>()
@@ -150,15 +160,16 @@ namespace Matching_Game
             AssignIconsToSquares();
 
             matchingTableLayoutPanel.Enabled = true;
+            matchingTablePanel.BackgroundImage = null;
+            gameOverPanel.SendToBack();
 
-            timeLeft = 50;
+            timeLeft = 5;
             timeLabel.Text = "50 seconds";
             countdownTimer.Start();
 
             playBtn.Visible = false;
             quitBtn.Visible = false;
         }
-
         private void exitGame(object sender, EventArgs e)
         {
             Close();
