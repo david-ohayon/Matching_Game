@@ -97,7 +97,7 @@
             this.matchingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.matchingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.matchingTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.matchingTableLayoutPanel.Size = new System.Drawing.Size(1074, 929);
+            this.matchingTableLayoutPanel.Size = new System.Drawing.Size(1034, 849);
             this.matchingTableLayoutPanel.TabIndex = 0;
             // 
             // label16
@@ -105,9 +105,9 @@
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(809, 695);
+            this.label16.Location = new System.Drawing.Point(779, 635);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(260, 232);
+            this.label16.Size = new System.Drawing.Size(250, 212);
             this.label16.TabIndex = 15;
             this.label16.Text = "c";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,9 +118,9 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(541, 695);
+            this.label15.Location = new System.Drawing.Point(521, 635);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(260, 232);
+            this.label15.Size = new System.Drawing.Size(250, 212);
             this.label15.TabIndex = 14;
             this.label15.Text = "c";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,9 +131,9 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(273, 695);
+            this.label14.Location = new System.Drawing.Point(263, 635);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(260, 232);
+            this.label14.Size = new System.Drawing.Size(250, 212);
             this.label14.TabIndex = 13;
             this.label14.Text = "c";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,9 +144,9 @@
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(5, 695);
+            this.label13.Location = new System.Drawing.Point(5, 635);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(260, 232);
+            this.label13.Size = new System.Drawing.Size(250, 212);
             this.label13.TabIndex = 12;
             this.label13.Text = "c";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,9 +157,9 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(809, 464);
+            this.label12.Location = new System.Drawing.Point(779, 424);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(260, 229);
+            this.label12.Size = new System.Drawing.Size(250, 209);
             this.label12.TabIndex = 11;
             this.label12.Text = "c";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,9 +170,9 @@
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(541, 464);
+            this.label11.Location = new System.Drawing.Point(521, 424);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(260, 229);
+            this.label11.Size = new System.Drawing.Size(250, 209);
             this.label11.TabIndex = 10;
             this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,9 +183,9 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(273, 464);
+            this.label10.Location = new System.Drawing.Point(263, 424);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(260, 229);
+            this.label10.Size = new System.Drawing.Size(250, 209);
             this.label10.TabIndex = 9;
             this.label10.Text = "c";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,9 +196,9 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(5, 464);
+            this.label9.Location = new System.Drawing.Point(5, 424);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(260, 229);
+            this.label9.Size = new System.Drawing.Size(250, 209);
             this.label9.TabIndex = 8;
             this.label9.Text = "c";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,9 +209,9 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(809, 233);
+            this.label8.Location = new System.Drawing.Point(779, 213);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(260, 229);
+            this.label8.Size = new System.Drawing.Size(250, 209);
             this.label8.TabIndex = 7;
             this.label8.Text = "c";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,9 +222,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(273, 233);
+            this.label6.Location = new System.Drawing.Point(263, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(260, 229);
+            this.label6.Size = new System.Drawing.Size(250, 209);
             this.label6.TabIndex = 5;
             this.label6.Text = "c";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,9 +235,9 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(5, 233);
+            this.label5.Location = new System.Drawing.Point(5, 213);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(260, 229);
+            this.label5.Size = new System.Drawing.Size(250, 209);
             this.label5.TabIndex = 4;
             this.label5.Text = "c";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,9 +248,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(809, 2);
+            this.label4.Location = new System.Drawing.Point(779, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(260, 229);
+            this.label4.Size = new System.Drawing.Size(250, 209);
             this.label4.TabIndex = 3;
             this.label4.Text = "c";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,9 +261,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(541, 2);
+            this.label3.Location = new System.Drawing.Point(521, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 229);
+            this.label3.Size = new System.Drawing.Size(250, 209);
             this.label3.TabIndex = 2;
             this.label3.Text = "c";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -274,9 +274,9 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(273, 2);
+            this.label2.Location = new System.Drawing.Point(263, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 229);
+            this.label2.Size = new System.Drawing.Size(250, 209);
             this.label2.TabIndex = 1;
             this.label2.Text = "c";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,7 +289,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(5, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 229);
+            this.label1.Size = new System.Drawing.Size(250, 209);
             this.label1.TabIndex = 0;
             this.label1.Text = "c";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -300,9 +300,9 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Webdings", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(541, 233);
+            this.label7.Location = new System.Drawing.Point(521, 213);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(260, 229);
+            this.label7.Size = new System.Drawing.Size(250, 209);
             this.label7.TabIndex = 6;
             this.label7.Text = "c";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -320,7 +320,7 @@
             this.timeLabel.ForeColor = System.Drawing.Color.White;
             this.timeLabel.Location = new System.Drawing.Point(0, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(1074, 100);
+            this.timeLabel.Size = new System.Drawing.Size(1034, 100);
             this.timeLabel.TabIndex = 1;
             this.timeLabel.Text = "50 seconds";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,9 +334,9 @@
             this.timeLabelPanel.Controls.Add(this.playBtn);
             this.timeLabelPanel.Controls.Add(this.timeLabel);
             this.timeLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.timeLabelPanel.Location = new System.Drawing.Point(0, 0);
+            this.timeLabelPanel.Location = new System.Drawing.Point(20, 60);
             this.timeLabelPanel.Name = "timeLabelPanel";
-            this.timeLabelPanel.Size = new System.Drawing.Size(1074, 100);
+            this.timeLabelPanel.Size = new System.Drawing.Size(1034, 100);
             this.timeLabelPanel.TabIndex = 2;
             // 
             // quitBtn
@@ -373,7 +373,7 @@
             this.settingsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
             this.settingsBtn.IconSize = 70;
             this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
+            this.settingsBtn.Location = new System.Drawing.Point(923, 12);
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Rotation = 0D;
             this.settingsBtn.Size = new System.Drawing.Size(99, 73);
@@ -407,9 +407,9 @@
             this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
             this.matchingTablePanel.Controls.Add(this.gameOverPanel);
             this.matchingTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchingTablePanel.Location = new System.Drawing.Point(0, 100);
+            this.matchingTablePanel.Location = new System.Drawing.Point(20, 160);
             this.matchingTablePanel.Name = "matchingTablePanel";
-            this.matchingTablePanel.Size = new System.Drawing.Size(1074, 929);
+            this.matchingTablePanel.Size = new System.Drawing.Size(1034, 849);
             this.matchingTablePanel.TabIndex = 3;
             // 
             // gameOverPanel
@@ -419,7 +419,7 @@
             this.gameOverPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameOverPanel.Location = new System.Drawing.Point(0, 0);
             this.gameOverPanel.Name = "gameOverPanel";
-            this.gameOverPanel.Size = new System.Drawing.Size(1074, 929);
+            this.gameOverPanel.Size = new System.Drawing.Size(1034, 849);
             this.gameOverPanel.TabIndex = 1;
             // 
             // replayBtn
@@ -436,7 +436,7 @@
             this.replayBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
             this.replayBtn.IconSize = 140;
             this.replayBtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.replayBtn.Location = new System.Drawing.Point(449, 345);
+            this.replayBtn.Location = new System.Drawing.Point(429, 305);
             this.replayBtn.Name = "replayBtn";
             this.replayBtn.Rotation = 0D;
             this.replayBtn.Size = new System.Drawing.Size(188, 163);
@@ -453,7 +453,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1074, 1029);
             this.Controls.Add(this.matchingTablePanel);
             this.Controls.Add(this.timeLabelPanel);
@@ -461,7 +460,9 @@
             this.MinimumSize = new System.Drawing.Size(900, 900);
             this.Name = "MatchingGame";
             this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Matching Game";
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.matchingTableLayoutPanel.ResumeLayout(false);
             this.timeLabelPanel.ResumeLayout(false);
             this.matchingTablePanel.ResumeLayout(false);
