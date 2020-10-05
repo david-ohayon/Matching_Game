@@ -169,7 +169,7 @@ namespace Matching_Game
             matchingTablePanel.BackgroundImage = null;
             gameOverPanel.SendToBack();
 
-            timeLeft = 5;
+            timeLeft = 50;
             timeLabel.Text = "50 seconds";
             countdownTimer.Start();
 
