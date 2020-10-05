@@ -50,8 +50,9 @@
             this.choiceTimer = new System.Windows.Forms.Timer(this.components);
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeLabelPanel = new System.Windows.Forms.Panel();
+            this.quitBtn = new FontAwesome.Sharp.IconButton();
+            this.settingsBtn = new FontAwesome.Sharp.IconButton();
             this.playBtn = new FontAwesome.Sharp.IconButton();
-            this.quitBtn = new System.Windows.Forms.Button();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameOverPanel = new System.Windows.Forms.Panel();
             this.replayBtn = new FontAwesome.Sharp.IconButton();
@@ -328,14 +329,57 @@
             // timeLabelPanel
             // 
             this.timeLabelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.timeLabelPanel.Controls.Add(this.playBtn);
             this.timeLabelPanel.Controls.Add(this.quitBtn);
+            this.timeLabelPanel.Controls.Add(this.settingsBtn);
+            this.timeLabelPanel.Controls.Add(this.playBtn);
             this.timeLabelPanel.Controls.Add(this.timeLabel);
             this.timeLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.timeLabelPanel.Location = new System.Drawing.Point(0, 0);
             this.timeLabelPanel.Name = "timeLabelPanel";
             this.timeLabelPanel.Size = new System.Drawing.Size(1074, 100);
             this.timeLabelPanel.TabIndex = 2;
+            // 
+            // quitBtn
+            // 
+            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.quitBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.quitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
+            this.quitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
+            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quitBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.quitBtn.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.quitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.quitBtn.IconSize = 70;
+            this.quitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.quitBtn.Location = new System.Drawing.Point(12, 12);
+            this.quitBtn.Name = "quitBtn";
+            this.quitBtn.Rotation = 0D;
+            this.quitBtn.Size = new System.Drawing.Size(99, 73);
+            this.quitBtn.TabIndex = 7;
+            this.quitBtn.UseVisualStyleBackColor = false;
+            this.quitBtn.Visible = false;
+            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
+            this.settingsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.settingsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
+            this.settingsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.settingsBtn.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.settingsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.settingsBtn.IconSize = 70;
+            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Rotation = 0D;
+            this.settingsBtn.Size = new System.Drawing.Size(99, 73);
+            this.settingsBtn.TabIndex = 6;
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
             // playBtn
             // 
@@ -356,22 +400,6 @@
             this.playBtn.TabIndex = 4;
             this.playBtn.UseVisualStyleBackColor = false;
             this.playBtn.Click += new System.EventHandler(this.startGame);
-            // 
-            // quitBtn
-            // 
-            this.quitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitBtn.ForeColor = System.Drawing.Color.White;
-            this.quitBtn.Location = new System.Drawing.Point(899, 12);
-            this.quitBtn.Name = "quitBtn";
-            this.quitBtn.Size = new System.Drawing.Size(163, 73);
-            this.quitBtn.TabIndex = 3;
-            this.quitBtn.Text = "Exit";
-            this.quitBtn.UseCompatibleTextRendering = true;
-            this.quitBtn.UseVisualStyleBackColor = false;
-            this.quitBtn.Click += new System.EventHandler(this.exitGame);
             // 
             // matchingTablePanel
             // 
@@ -396,6 +424,7 @@
             // 
             // replayBtn
             // 
+            this.replayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.replayBtn.BackColor = System.Drawing.Color.Transparent;
             this.replayBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.replayBtn.FlatAppearance.BorderSize = 2;
@@ -465,10 +494,11 @@
         private System.Windows.Forms.Panel timeLabelPanel;
         private System.Windows.Forms.Panel matchingTablePanel;
         private System.Windows.Forms.Timer countdownTimer;
-        private System.Windows.Forms.Button quitBtn;
         private System.Windows.Forms.Panel gameOverPanel;
         private FontAwesome.Sharp.IconButton replayBtn;
         private FontAwesome.Sharp.IconButton playBtn;
+        private FontAwesome.Sharp.IconButton settingsBtn;
+        private FontAwesome.Sharp.IconButton quitBtn;
     }
 }
 
