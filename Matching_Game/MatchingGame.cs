@@ -18,7 +18,7 @@ namespace Matching_Game
         private Label firstClicked = null;
         private Label secondClicked = null;
 
-        private int timeLeft;
+        private int timeLeft = 40;
 
         // ctor
         public MatchingGame()
@@ -35,6 +35,7 @@ namespace Matching_Game
             timeLabel.Font = new Font(pfc.Families[0], timeLabel.Font.Size);
             saveSettings.Font = new Font(pfc.Families[0], saveSettings.Font.Size);
             timeSettings.Font = new Font(pfc.Families[0], timeSettings.Font.Size);
+            timeleftInfo.Font = new Font(pfc.Families[0], timeleftInfo.Font.Size);
         }
 
         // color and visibilty of gameover panel
@@ -172,8 +173,6 @@ namespace Matching_Game
             matchingTablePanel.BackgroundImage = null;
             gameoverPanel.SendToBack();
 
-            timeLeft = 40;
-            timeLabel.Text = "40 seconds";
             countdownTimer.Start();
 
             playBtn.Visible = false;

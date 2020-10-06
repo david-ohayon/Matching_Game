@@ -55,10 +55,11 @@
             this.playBtn = new FontAwesome.Sharp.IconButton();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameoverPanel = new System.Windows.Forms.Panel();
+            this.saveSettings = new System.Windows.Forms.Button();
             this.timeSettings = new System.Windows.Forms.NumericUpDown();
             this.replayBtn = new FontAwesome.Sharp.IconButton();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.saveSettings = new System.Windows.Forms.Button();
+            this.timeleftInfo = new System.Windows.Forms.Label();
             this.matchingTableLayoutPanel.SuspendLayout();
             this.timeLabelPanel.SuspendLayout();
             this.matchingTablePanel.SuspendLayout();
@@ -325,7 +326,7 @@
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(1074, 100);
             this.timeLabel.TabIndex = 1;
-            this.timeLabel.Text = "50 seconds";
+            this.timeLabel.Text = "40 seconds";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timeLabel.UseCompatibleTextRendering = true;
             // 
@@ -407,8 +408,8 @@
             // matchingTablePanel
             // 
             this.matchingTablePanel.BackColor = System.Drawing.Color.Transparent;
-            this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
             this.matchingTablePanel.Controls.Add(this.gameoverPanel);
+            this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
             this.matchingTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchingTablePanel.Location = new System.Drawing.Point(0, 100);
             this.matchingTablePanel.Name = "matchingTablePanel";
@@ -418,6 +419,7 @@
             // gameoverPanel
             // 
             this.gameoverPanel.BackColor = System.Drawing.Color.Black;
+            this.gameoverPanel.Controls.Add(this.timeleftInfo);
             this.gameoverPanel.Controls.Add(this.saveSettings);
             this.gameoverPanel.Controls.Add(this.timeSettings);
             this.gameoverPanel.Controls.Add(this.replayBtn);
@@ -426,6 +428,20 @@
             this.gameoverPanel.Name = "gameoverPanel";
             this.gameoverPanel.Size = new System.Drawing.Size(1074, 929);
             this.gameoverPanel.TabIndex = 1;
+            // 
+            // saveSettings
+            // 
+            this.saveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSettings.ForeColor = System.Drawing.Color.White;
+            this.saveSettings.Location = new System.Drawing.Point(449, 561);
+            this.saveSettings.Name = "saveSettings";
+            this.saveSettings.Size = new System.Drawing.Size(188, 95);
+            this.saveSettings.TabIndex = 5;
+            this.saveSettings.Text = "Save";
+            this.saveSettings.UseVisualStyleBackColor = true;
+            this.saveSettings.Click += new System.EventHandler(this.saveSettings_Click);
             // 
             // timeSettings
             // 
@@ -438,7 +454,7 @@
             0,
             0,
             0});
-            this.timeSettings.Location = new System.Drawing.Point(408, 249);
+            this.timeSettings.Location = new System.Drawing.Point(413, 249);
             this.timeSettings.Maximum = new decimal(new int[] {
             60,
             0,
@@ -450,7 +466,7 @@
             0,
             0});
             this.timeSettings.Name = "timeSettings";
-            this.timeSettings.Size = new System.Drawing.Size(279, 67);
+            this.timeSettings.Size = new System.Drawing.Size(274, 67);
             this.timeSettings.TabIndex = 4;
             this.timeSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.timeSettings.Value = new decimal(new int[] {
@@ -487,19 +503,17 @@
             this.countdownTimer.Interval = 1000;
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
             // 
-            // saveSettings
+            // timeleftInfo
             // 
-            this.saveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveSettings.ForeColor = System.Drawing.Color.White;
-            this.saveSettings.Location = new System.Drawing.Point(449, 561);
-            this.saveSettings.Name = "saveSettings";
-            this.saveSettings.Size = new System.Drawing.Size(188, 95);
-            this.saveSettings.TabIndex = 5;
-            this.saveSettings.Text = "Save";
-            this.saveSettings.UseVisualStyleBackColor = true;
-            this.saveSettings.Click += new System.EventHandler(this.saveSettings_Click);
+            this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
+            this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeleftInfo.ForeColor = System.Drawing.Color.White;
+            this.timeleftInfo.Location = new System.Drawing.Point(408, 182);
+            this.timeleftInfo.Name = "timeleftInfo";
+            this.timeleftInfo.Size = new System.Drawing.Size(279, 51);
+            this.timeleftInfo.TabIndex = 6;
+            this.timeleftInfo.Text = "time left";
+            this.timeleftInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MatchingGame
             // 
@@ -554,6 +568,7 @@
         private FontAwesome.Sharp.IconButton quitBtn;
         private System.Windows.Forms.NumericUpDown timeSettings;
         private System.Windows.Forms.Button saveSettings;
+        private System.Windows.Forms.Label timeleftInfo;
     }
 }
 
