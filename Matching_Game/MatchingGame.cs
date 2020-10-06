@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +17,7 @@ namespace Matching_Game
         private Label firstClicked = null;
         private Label secondClicked = null;
 
-        private int timeLeft = 40;
+        private int timeLeft;
 
         // ctor
         public MatchingGame()
@@ -48,13 +47,16 @@ namespace Matching_Game
         }
         private void GameOverPanelVisibility()
         {
+            gameoverPanel.BringToFront();
             matchingTableLayoutPanel.Enabled = false;
             timeSettings.Visible = false;
+            timeleftInfo.Visible = false;
+            timeLabel.Visible = false;
             saveSettings.Visible = false;
-            gameoverPanel.BringToFront();
 
             settingsBtn.Visible = true;
             quitBtn.Visible = true;
+            replayBtn.Visible = true;
         }
 
         // assign a random icon to a random card
@@ -143,7 +145,7 @@ namespace Matching_Game
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
             // hasn't lost yet
-            if (timeLeft > 0)
+            if (timeLeft > 1)
             {
                 timeLeft -= 1;
                 timeLabel.Text = $"{timeLeft} seconds";
@@ -162,6 +164,8 @@ namespace Matching_Game
         // start
         private void startGame(object sender, EventArgs e)
         {
+            timeLeft = (int)timeSettings.Value;
+
             icons = new List<string>()
             {
                 "!", "!", "V", "V", ",", ",", "~", "~",
@@ -183,19 +187,16 @@ namespace Matching_Game
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             gameoverPanel.BringToFront();
+            quitBtn.Visible = true;
             timeSettings.Visible = true;
+            timeleftInfo.Visible = true;
             replayBtn.Visible = false;
             GameOverPanelColor(Color.FromArgb(67, 67, 67));
         }
-        private void saveSettings_Click(object sender, EventArgs e)
+        private void timeSettings_ValueChanged(object sender, EventArgs e)
         {
-            decimal newTimeLeft = timeSettings.Value;
-            timeLeft = Convert.ToInt32(newTimeLeft);
-            if (timeLeft == 0)
-                return;
+            timeLeft = (int)timeSettings.Value;
             timeLabel.Text = $"{timeLeft} seconds";
-
-            gameoverPanel.SendToBack();
         }
         private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -203,10 +204,16 @@ namespace Matching_Game
                 if (e.KeyChar != 8)
                     e.Handled = true;
         }
+        private void saveSettings_Click(object sender, EventArgs e)
+        {
+            quitBtn.Visible = false;
+            gameoverPanel.SendToBack();
+        }
         // quit
         private void quitBtn_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }

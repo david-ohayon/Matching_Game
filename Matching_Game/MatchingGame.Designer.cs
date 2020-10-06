@@ -435,11 +435,11 @@
             this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
             this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeleftInfo.ForeColor = System.Drawing.Color.White;
-            this.timeleftInfo.Location = new System.Drawing.Point(408, 182);
+            this.timeleftInfo.Location = new System.Drawing.Point(413, 200);
             this.timeleftInfo.Name = "timeleftInfo";
-            this.timeleftInfo.Size = new System.Drawing.Size(279, 51);
+            this.timeleftInfo.Size = new System.Drawing.Size(274, 46);
             this.timeleftInfo.TabIndex = 6;
-            this.timeleftInfo.Text = "time left";
+            this.timeleftInfo.Text = "time left:";
             this.timeleftInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // saveSettings
@@ -474,7 +474,7 @@
             0,
             0});
             this.timeSettings.Minimum = new decimal(new int[] {
-            20,
+            5,
             0,
             0,
             0});
@@ -483,10 +483,11 @@
             this.timeSettings.TabIndex = 4;
             this.timeSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.timeSettings.Value = new decimal(new int[] {
-            20,
+            40,
             0,
             0,
             0});
+            this.timeSettings.ValueChanged += new System.EventHandler(this.timeSettings_ValueChanged);
             this.timeSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeSettings_KeyPress);
             // 
             // replayBtn
