@@ -89,9 +89,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\appicon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="appicon.ico" />
     <None Include="Resources\matchingTable.png" />
   </ItemGroup>

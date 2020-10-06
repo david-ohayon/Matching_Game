@@ -55,11 +55,11 @@
             this.playBtn = new FontAwesome.Sharp.IconButton();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameoverPanel = new System.Windows.Forms.Panel();
+            this.timeleftInfo = new System.Windows.Forms.Label();
             this.saveSettings = new System.Windows.Forms.Button();
             this.timeSettings = new System.Windows.Forms.NumericUpDown();
             this.replayBtn = new FontAwesome.Sharp.IconButton();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.timeleftInfo = new System.Windows.Forms.Label();
             this.matchingTableLayoutPanel.SuspendLayout();
             this.timeLabelPanel.SuspendLayout();
             this.matchingTablePanel.SuspendLayout();
@@ -429,6 +429,18 @@
             this.gameoverPanel.Size = new System.Drawing.Size(1074, 929);
             this.gameoverPanel.TabIndex = 1;
             // 
+            // timeleftInfo
+            // 
+            this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
+            this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeleftInfo.ForeColor = System.Drawing.Color.White;
+            this.timeleftInfo.Location = new System.Drawing.Point(408, 182);
+            this.timeleftInfo.Name = "timeleftInfo";
+            this.timeleftInfo.Size = new System.Drawing.Size(279, 51);
+            this.timeleftInfo.TabIndex = 6;
+            this.timeleftInfo.Text = "time left";
+            this.timeleftInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // saveSettings
             // 
             this.saveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -502,18 +514,6 @@
             // 
             this.countdownTimer.Interval = 1000;
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
-            // 
-            // timeleftInfo
-            // 
-            this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
-            this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeleftInfo.ForeColor = System.Drawing.Color.White;
-            this.timeleftInfo.Location = new System.Drawing.Point(408, 182);
-            this.timeleftInfo.Name = "timeleftInfo";
-            this.timeleftInfo.Size = new System.Drawing.Size(279, 51);
-            this.timeleftInfo.TabIndex = 6;
-            this.timeleftInfo.Text = "time left";
-            this.timeleftInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MatchingGame
             // 
