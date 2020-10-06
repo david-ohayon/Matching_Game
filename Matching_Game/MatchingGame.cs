@@ -135,7 +135,7 @@ namespace Matching_Game
             // won
             countdownTimer.Stop();
             timeLabel.Text = "You won!";
-            await Task.Delay(750);
+            await Task.Delay(700);
 
             GameOverPanelColor(Color.FromArgb(118, 184, 82));
             GameOverPanelVisibility();
@@ -159,7 +159,7 @@ namespace Matching_Game
             }
         }
 
-        // start, quit and settings
+        // start
         private void startGame(object sender, EventArgs e)
         {
             icons = new List<string>()
@@ -179,7 +179,7 @@ namespace Matching_Game
             settingsBtn.Visible = false;
             quitBtn.Visible = false;
         }
-        // TODO: setting btn event
+        //settings
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             gameoverPanel.BringToFront();
@@ -187,18 +187,6 @@ namespace Matching_Game
             replayBtn.Visible = false;
             GameOverPanelColor(Color.FromArgb(67, 67, 67));
         }
-        private void quitBtn_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar < 48 || e.KeyChar > 57)
-                if (e.KeyChar != 8)
-                     e.Handled = true;
-        }
-
         private void saveSettings_Click(object sender, EventArgs e)
         {
             decimal newTimeLeft = timeSettings.Value;
@@ -208,6 +196,17 @@ namespace Matching_Game
             timeLabel.Text = $"{timeLeft} seconds";
 
             gameoverPanel.SendToBack();
+        }
+        private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 48 || e.KeyChar > 57)
+                if (e.KeyChar != 8)
+                    e.Handled = true;
+        }
+        // quit
+        private void quitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

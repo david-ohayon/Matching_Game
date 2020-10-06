@@ -408,8 +408,8 @@
             // matchingTablePanel
             // 
             this.matchingTablePanel.BackColor = System.Drawing.Color.Transparent;
-            this.matchingTablePanel.Controls.Add(this.gameoverPanel);
             this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
+            this.matchingTablePanel.Controls.Add(this.gameoverPanel);
             this.matchingTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchingTablePanel.Location = new System.Drawing.Point(0, 100);
             this.matchingTablePanel.Name = "matchingTablePanel";
@@ -431,6 +431,7 @@
             // 
             // timeleftInfo
             // 
+            this.timeleftInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
             this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeleftInfo.ForeColor = System.Drawing.Color.White;
