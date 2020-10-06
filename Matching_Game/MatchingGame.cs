@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,15 +33,27 @@ namespace Matching_Game
         {
             pfc.AddFontFile(@"..\..\Resources\AtariClassic.ttf");
             timeLabel.Font = new Font(pfc.Families[0], timeLabel.Font.Size);
+            saveSettings.Font = new Font(pfc.Families[0], saveSettings.Font.Size);
+            timeSettings.Font = new Font(pfc.Families[0], timeSettings.Font.Size);
         }
 
-        // game over panel for winning or losing
-        private void GameOverPanel(Color color)
+        // color and visibilty of gameover panel
+        private void GameOverPanelColor(Color color)
         {
-            gameOverPanel.BackColor = Color.FromArgb(125, color);
+            gameoverPanel.BackColor = Color.FromArgb(80, color);
             // must do else cant see opacity change of gameoverPanel
             matchingTablePanel.BackgroundImage = Properties.Resources.matchingTable;
             matchingTablePanel.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+        private void GameOverPanelVisibility()
+        {
+            matchingTableLayoutPanel.Enabled = false;
+            timeSettings.Visible = false;
+            saveSettings.Visible = false;
+            gameoverPanel.BringToFront();
+
+            settingsBtn.Visible = true;
+            quitBtn.Visible = true;
         }
 
         // assign a random icon to a random card
@@ -123,13 +136,8 @@ namespace Matching_Game
             timeLabel.Text = "You won!";
             await Task.Delay(750);
 
-            matchingTableLayoutPanel.Enabled = false;    
-            gameOverPanel.BringToFront();
-
-            settingsBtn.Visible = true;
-            quitBtn.Visible = true;
-
-            GameOverPanel(Color.Green);
+            GameOverPanelColor(Color.FromArgb(118, 184, 82));
+            GameOverPanelVisibility();
         }
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
@@ -145,13 +153,8 @@ namespace Matching_Game
                 countdownTimer.Stop();
                 timeLabel.Text = "Time's up!";
 
-                matchingTableLayoutPanel.Enabled = false;
-                gameOverPanel.BringToFront();
-
-                settingsBtn.Visible = true;
-                quitBtn.Visible = true;
-
-                GameOverPanel(Color.Red);
+                GameOverPanelColor(Color.FromArgb(255, 75, 43));
+                GameOverPanelVisibility();
             }
         }
 
@@ -167,10 +170,10 @@ namespace Matching_Game
 
             matchingTableLayoutPanel.Enabled = true;
             matchingTablePanel.BackgroundImage = null;
-            gameOverPanel.SendToBack();
+            gameoverPanel.SendToBack();
 
-            timeLeft = 50;
-            timeLabel.Text = "50 seconds";
+            timeLeft = 40;
+            timeLabel.Text = "40 seconds";
             countdownTimer.Start();
 
             playBtn.Visible = false;
@@ -180,11 +183,32 @@ namespace Matching_Game
         // TODO: setting btn event
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-
+            gameoverPanel.BringToFront();
+            timeSettings.Visible = true;
+            replayBtn.Visible = false;
+            GameOverPanelColor(Color.FromArgb(67, 67, 67));
         }
         private void quitBtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < 48 || e.KeyChar > 57)
+                if (e.KeyChar != 8)
+                     e.Handled = true;
+        }
+
+        private void saveSettings_Click(object sender, EventArgs e)
+        {
+            decimal newTimeLeft = timeSettings.Value;
+            timeLeft = Convert.ToInt32(newTimeLeft);
+            if (timeLeft == 0)
+                return;
+            timeLabel.Text = $"{timeLeft} seconds";
+
+            gameoverPanel.SendToBack();
         }
     }
 }
