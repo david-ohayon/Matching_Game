@@ -346,8 +346,8 @@
             // matchingTablePanel
             // 
             this.matchingTablePanel.BackColor = System.Drawing.Color.Transparent;
-            this.matchingTablePanel.Controls.Add(this.gameoverPanel);
             this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
+            this.matchingTablePanel.Controls.Add(this.gameoverPanel);
             this.matchingTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchingTablePanel.Location = new System.Drawing.Point(0, 100);
             this.matchingTablePanel.Name = "matchingTablePanel";
