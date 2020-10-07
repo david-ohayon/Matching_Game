@@ -345,6 +345,7 @@
             // 
             // quitBtn
             // 
+            this.quitBtn.AutoSize = true;
             this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.quitBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.quitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
@@ -358,8 +359,9 @@
             this.quitBtn.Location = new System.Drawing.Point(12, 12);
             this.quitBtn.Name = "quitBtn";
             this.quitBtn.Rotation = 0D;
-            this.quitBtn.Size = new System.Drawing.Size(99, 73);
+            this.quitBtn.Size = new System.Drawing.Size(99, 78);
             this.quitBtn.TabIndex = 7;
+            this.quitBtn.UseCompatibleTextRendering = true;
             this.quitBtn.UseVisualStyleBackColor = false;
             this.quitBtn.Visible = false;
             this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
@@ -383,6 +385,7 @@
             this.settingsBtn.Rotation = 0D;
             this.settingsBtn.Size = new System.Drawing.Size(99, 78);
             this.settingsBtn.TabIndex = 6;
+            this.settingsBtn.UseCompatibleTextRendering = true;
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
             // 
@@ -442,6 +445,7 @@
             this.timeleftInfoLbl.TabIndex = 6;
             this.timeleftInfoLbl.Text = "time left:";
             this.timeleftInfoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timeleftInfoLbl.UseCompatibleTextRendering = true;
             // 
             // saveSettingsBtn
             // 
