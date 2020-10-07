@@ -50,16 +50,16 @@
             this.choiceTimer = new System.Windows.Forms.Timer(this.components);
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeLabelPanel = new System.Windows.Forms.Panel();
-            this.quitBtn = new FontAwesome.Sharp.IconButton();
-            this.settingsBtn = new FontAwesome.Sharp.IconButton();
-            this.playBtn = new FontAwesome.Sharp.IconButton();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameoverPanel = new System.Windows.Forms.Panel();
             this.timeleftInfoLbl = new System.Windows.Forms.Label();
             this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.timeInpSettings = new System.Windows.Forms.NumericUpDown();
-            this.replayBtn = new FontAwesome.Sharp.IconButton();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
+            this.replayBtn = new System.Windows.Forms.Button();
+            this.settingsBtn = new System.Windows.Forms.Button();
+            this.quitBtn = new System.Windows.Forms.Button();
+            this.playBtn = new System.Windows.Forms.Button();
             this.matchingTableLayoutPanel.SuspendLayout();
             this.timeLabelPanel.SuspendLayout();
             this.matchingTablePanel.SuspendLayout();
@@ -333,8 +333,8 @@
             // timeLabelPanel
             // 
             this.timeLabelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.timeLabelPanel.Controls.Add(this.quitBtn);
             this.timeLabelPanel.Controls.Add(this.settingsBtn);
+            this.timeLabelPanel.Controls.Add(this.quitBtn);
             this.timeLabelPanel.Controls.Add(this.playBtn);
             this.timeLabelPanel.Controls.Add(this.timeLabel);
             this.timeLabelPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -343,77 +343,11 @@
             this.timeLabelPanel.Size = new System.Drawing.Size(1074, 100);
             this.timeLabelPanel.TabIndex = 2;
             // 
-            // quitBtn
-            // 
-            this.quitBtn.AutoSize = true;
-            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.quitBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.quitBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
-            this.quitBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
-            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.quitBtn.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.quitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.quitBtn.IconSize = 70;
-            this.quitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.quitBtn.Location = new System.Drawing.Point(12, 12);
-            this.quitBtn.Name = "quitBtn";
-            this.quitBtn.Rotation = 0D;
-            this.quitBtn.Size = new System.Drawing.Size(99, 78);
-            this.quitBtn.TabIndex = 7;
-            this.quitBtn.UseCompatibleTextRendering = true;
-            this.quitBtn.UseVisualStyleBackColor = false;
-            this.quitBtn.Visible = false;
-            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingsBtn.AutoSize = true;
-            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.settingsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.settingsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
-            this.settingsBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.settingsBtn.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.settingsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.settingsBtn.IconSize = 70;
-            this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Rotation = 0D;
-            this.settingsBtn.Size = new System.Drawing.Size(99, 78);
-            this.settingsBtn.TabIndex = 6;
-            this.settingsBtn.UseCompatibleTextRendering = true;
-            this.settingsBtn.UseVisualStyleBackColor = false;
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
-            // 
-            // playBtn
-            // 
-            this.playBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
-            this.playBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.playBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
-            this.playBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
-            this.playBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.playBtn.IconChar = FontAwesome.Sharp.IconChar.PlayCircle;
-            this.playBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.playBtn.IconSize = 70;
-            this.playBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.playBtn.Location = new System.Drawing.Point(12, 12);
-            this.playBtn.Name = "playBtn";
-            this.playBtn.Rotation = 0D;
-            this.playBtn.Size = new System.Drawing.Size(99, 73);
-            this.playBtn.TabIndex = 4;
-            this.playBtn.UseVisualStyleBackColor = false;
-            this.playBtn.Click += new System.EventHandler(this.startGame);
-            // 
             // matchingTablePanel
             // 
             this.matchingTablePanel.BackColor = System.Drawing.Color.Transparent;
-            this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
             this.matchingTablePanel.Controls.Add(this.gameoverPanel);
+            this.matchingTablePanel.Controls.Add(this.matchingTableLayoutPanel);
             this.matchingTablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchingTablePanel.Location = new System.Drawing.Point(0, 100);
             this.matchingTablePanel.Name = "matchingTablePanel";
@@ -423,10 +357,10 @@
             // gameoverPanel
             // 
             this.gameoverPanel.BackColor = System.Drawing.Color.Black;
+            this.gameoverPanel.Controls.Add(this.replayBtn);
             this.gameoverPanel.Controls.Add(this.timeleftInfoLbl);
             this.gameoverPanel.Controls.Add(this.saveSettingsBtn);
             this.gameoverPanel.Controls.Add(this.timeInpSettings);
-            this.gameoverPanel.Controls.Add(this.replayBtn);
             this.gameoverPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameoverPanel.Location = new System.Drawing.Point(0, 0);
             this.gameoverPanel.Name = "gameoverPanel";
@@ -494,31 +428,71 @@
             0});
             this.timeInpSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeInpSettings_KeyPress);
             // 
-            // replayBtn
-            // 
-            this.replayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.replayBtn.BackColor = System.Drawing.Color.Transparent;
-            this.replayBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.replayBtn.FlatAppearance.BorderSize = 2;
-            this.replayBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
-            this.replayBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(101)))), ((int)(((byte)(123)))));
-            this.replayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.replayBtn.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.replayBtn.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
-            this.replayBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.replayBtn.IconSize = 140;
-            this.replayBtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.replayBtn.Location = new System.Drawing.Point(449, 345);
-            this.replayBtn.Name = "replayBtn";
-            this.replayBtn.Rotation = 0D;
-            this.replayBtn.Size = new System.Drawing.Size(188, 163);
-            this.replayBtn.TabIndex = 3;
-            this.replayBtn.UseVisualStyleBackColor = false;
-            this.replayBtn.Click += new System.EventHandler(this.startGame);
-            // 
             // countdownTimer
             // 
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
+            // 
+            // replayBtn
+            // 
+            this.replayBtn.AutoSize = true;
+            this.replayBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.replayBtn.BackgroundImage = global::Matching_Game.Properties.Resources.replay;
+            this.replayBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.replayBtn.FlatAppearance.BorderSize = 0;
+            this.replayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.replayBtn.Location = new System.Drawing.Point(449, 358);
+            this.replayBtn.Name = "replayBtn";
+            this.replayBtn.Size = new System.Drawing.Size(188, 163);
+            this.replayBtn.TabIndex = 10;
+            this.replayBtn.UseVisualStyleBackColor = false;
+            this.replayBtn.Click += new System.EventHandler(this.startGame);
+            // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsBtn.AutoSize = true;
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.settingsBtn.BackgroundImage = global::Matching_Game.Properties.Resources.settings;
+            this.settingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(99, 73);
+            this.settingsBtn.TabIndex = 10;
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
+            // quitBtn
+            // 
+            this.quitBtn.AutoSize = true;
+            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.quitBtn.BackgroundImage = global::Matching_Game.Properties.Resources.quit;
+            this.quitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.quitBtn.FlatAppearance.BorderSize = 0;
+            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quitBtn.Location = new System.Drawing.Point(12, 12);
+            this.quitBtn.Name = "quitBtn";
+            this.quitBtn.Size = new System.Drawing.Size(99, 73);
+            this.quitBtn.TabIndex = 9;
+            this.quitBtn.UseVisualStyleBackColor = false;
+            this.quitBtn.Visible = false;
+            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            // 
+            // playBtn
+            // 
+            this.playBtn.AutoSize = true;
+            this.playBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.playBtn.BackgroundImage = global::Matching_Game.Properties.Resources.play;
+            this.playBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playBtn.FlatAppearance.BorderSize = 0;
+            this.playBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playBtn.Location = new System.Drawing.Point(12, 12);
+            this.playBtn.Name = "playBtn";
+            this.playBtn.Size = new System.Drawing.Size(99, 73);
+            this.playBtn.TabIndex = 8;
+            this.playBtn.UseVisualStyleBackColor = false;
+            this.playBtn.Click += new System.EventHandler(this.startGame);
             // 
             // MatchingGame
             // 
@@ -538,6 +512,7 @@
             this.timeLabelPanel.PerformLayout();
             this.matchingTablePanel.ResumeLayout(false);
             this.gameoverPanel.ResumeLayout(false);
+            this.gameoverPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeInpSettings)).EndInit();
             this.ResumeLayout(false);
 
@@ -568,13 +543,13 @@
         private System.Windows.Forms.Panel matchingTablePanel;
         private System.Windows.Forms.Timer countdownTimer;
         private System.Windows.Forms.Panel gameoverPanel;
-        private FontAwesome.Sharp.IconButton replayBtn;
-        private FontAwesome.Sharp.IconButton playBtn;
-        private FontAwesome.Sharp.IconButton settingsBtn;
-        private FontAwesome.Sharp.IconButton quitBtn;
         private System.Windows.Forms.NumericUpDown timeInpSettings;
         private System.Windows.Forms.Button saveSettingsBtn;
         private System.Windows.Forms.Label timeleftInfoLbl;
+        private System.Windows.Forms.Button playBtn;
+        private System.Windows.Forms.Button quitBtn;
+        private System.Windows.Forms.Button settingsBtn;
+        private System.Windows.Forms.Button replayBtn;
     }
 }
 

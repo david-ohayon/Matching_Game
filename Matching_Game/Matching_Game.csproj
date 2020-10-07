@@ -90,6 +90,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="appicon.ico" />
+    <None Include="Resources\replay.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\quit.png" />
     <None Include="Resources\matchingTable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
