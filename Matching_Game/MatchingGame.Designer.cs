@@ -479,7 +479,7 @@
             0,
             0});
             this.timeInpSettings.Minimum = new decimal(new int[] {
-            3,
+            20,
             0,
             0,
             0});
