@@ -18,8 +18,8 @@ namespace Matching_Game
         private Label secondClicked = null;
 
         private int timeLeft; // milliseconds
-        private bool lost = false;
-        private bool won = false;
+        private bool lost;
+        private bool won;
 
         // ctor
         public MatchingGame()
@@ -170,6 +170,8 @@ namespace Matching_Game
 
             timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
             timeLabel.Text = $"{timeLeft / 1000} seconds";
+            lost = false;
+            won = false;
 
             icons = new List<string>()
             {
