@@ -367,6 +367,7 @@
             // settingsBtn
             // 
             this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsBtn.AutoSize = true;
             this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(49)))), ((int)(((byte)(54)))));
             this.settingsBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.settingsBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(117)))), ((int)(((byte)(179)))));
@@ -380,7 +381,7 @@
             this.settingsBtn.Location = new System.Drawing.Point(963, 12);
             this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Rotation = 0D;
-            this.settingsBtn.Size = new System.Drawing.Size(99, 73);
+            this.settingsBtn.Size = new System.Drawing.Size(99, 78);
             this.settingsBtn.TabIndex = 6;
             this.settingsBtn.UseVisualStyleBackColor = false;
             this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
@@ -474,7 +475,7 @@
             0,
             0});
             this.timeInpSettings.Minimum = new decimal(new int[] {
-            20,
+            3,
             0,
             0,
             0});
@@ -530,6 +531,7 @@
             this.Text = "Matching Game";
             this.matchingTableLayoutPanel.ResumeLayout(false);
             this.timeLabelPanel.ResumeLayout(false);
+            this.timeLabelPanel.PerformLayout();
             this.matchingTablePanel.ResumeLayout(false);
             this.gameoverPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.timeInpSettings)).EndInit();

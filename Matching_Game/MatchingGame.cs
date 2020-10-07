@@ -18,6 +18,8 @@ namespace Matching_Game
         private Label secondClicked = null;
 
         private int timeLeft; // milliseconds
+        private bool lost = false;
+        private bool won = false;
 
         // ctor
         public MatchingGame()
@@ -48,7 +50,6 @@ namespace Matching_Game
         private void GameOverPanelVisibilityLW()
         {
             gameoverPanel.BringToFront();
-            matchingTableLayoutPanel.Enabled = false;
             timeInpSettings.Visible = false;
             timeleftInfoLbl.Visible = false;
             saveSettingsBtn.Visible = false;
@@ -134,12 +135,13 @@ namespace Matching_Game
             }
 
             // won
+            won = true;
             countdownTimer.Stop();
             timeLabel.Text = "You won!";
             await Task.Delay(700);
 
-            GameOverPanelColor(Color.FromArgb(118, 184, 82));
             GameOverPanelVisibilityLW();
+            GameOverPanelColor(Color.FromArgb(118, 184, 82));
         }
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
@@ -152,11 +154,12 @@ namespace Matching_Game
             // lost
             else
             {
+                lost = true;
                 countdownTimer.Stop();
                 timeLabel.Text = "Time's up!";
 
-                GameOverPanelColor(Color.FromArgb(255, 75, 43));
                 GameOverPanelVisibilityLW();
+                GameOverPanelColor(Color.FromArgb(255, 75, 43));
             }
         }
 
@@ -175,7 +178,6 @@ namespace Matching_Game
             };
             AssignIconsToSquares();
 
-            matchingTableLayoutPanel.Enabled = true;
             matchingTablePanel.BackgroundImage = null;
             gameoverPanel.SendToBack();
 
@@ -206,6 +208,19 @@ namespace Matching_Game
         {
             timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
             timeLabel.Text = $"{timeLeft / 1000} seconds";
+
+            if (lost)
+            {
+                GameOverPanelVisibilityLW();
+                GameOverPanelColor(Color.FromArgb(255, 75, 43));
+                return;
+            }
+            if (won)
+            {
+                GameOverPanelVisibilityLW();
+                GameOverPanelColor(Color.FromArgb(118, 184, 82));
+                return;
+            }
 
             quitBtn.Visible = false;
             gameoverPanel.SendToBack();
