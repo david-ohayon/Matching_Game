@@ -196,13 +196,13 @@ namespace Matching_Game
             replayBtn.Visible = false;
             GameOverPanelColor(Color.FromArgb(67, 67, 67));
         }
-        private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
+        private void timeInpSettings_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar < 48 || e.KeyChar > 57)
                 if (e.KeyChar != 8)
                     e.Handled = true;
         }
-        private void saveSettings_Click(object sender, EventArgs e)
+        private void saveSettingsBtn_Click(object sender, EventArgs e)
         {
             timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
             timeLabel.Text = $"{timeLeft / 1000} seconds";

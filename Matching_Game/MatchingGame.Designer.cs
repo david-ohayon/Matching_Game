@@ -454,7 +454,7 @@
             this.saveSettingsBtn.TabIndex = 5;
             this.saveSettingsBtn.Text = "Save";
             this.saveSettingsBtn.UseVisualStyleBackColor = true;
-            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettings_Click);
+            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettingsBtn_Click);
             // 
             // timeInpSettings
             // 
@@ -474,7 +474,7 @@
             0,
             0});
             this.timeInpSettings.Minimum = new decimal(new int[] {
-            5,
+            20,
             0,
             0,
             0});
@@ -487,7 +487,7 @@
             0,
             0,
             0});
-            this.timeInpSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeSettings_KeyPress);
+            this.timeInpSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeInpSettings_KeyPress);
             // 
             // replayBtn
             // 
