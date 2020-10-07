@@ -17,7 +17,7 @@ namespace Matching_Game
         private Label firstClicked = null;
         private Label secondClicked = null;
 
-        private int timeLeft;
+        private int timeLeft; // milliseconds
 
         // ctor
         public MatchingGame()
@@ -32,9 +32,9 @@ namespace Matching_Game
         {
             pfc.AddFontFile(@"..\..\Resources\AtariClassic.ttf");
             timeLabel.Font = new Font(pfc.Families[0], timeLabel.Font.Size);
-            saveSettings.Font = new Font(pfc.Families[0], saveSettings.Font.Size);
-            timeSettings.Font = new Font(pfc.Families[0], timeSettings.Font.Size);
-            timeleftInfo.Font = new Font(pfc.Families[0], timeleftInfo.Font.Size);
+            saveSettingsBtn.Font = new Font(pfc.Families[0], saveSettingsBtn.Font.Size);
+            timeInpSettings.Font = new Font(pfc.Families[0], timeInpSettings.Font.Size);
+            timeleftInfoLbl.Font = new Font(pfc.Families[0], timeleftInfoLbl.Font.Size);
         }
 
         // color and visibilty of gameover panel
@@ -45,14 +45,13 @@ namespace Matching_Game
             matchingTablePanel.BackgroundImage = Properties.Resources.matchingTable;
             matchingTablePanel.BackgroundImageLayout = ImageLayout.Stretch;
         }
-        private void GameOverPanelVisibility()
+        private void GameOverPanelVisibilityLW()
         {
             gameoverPanel.BringToFront();
             matchingTableLayoutPanel.Enabled = false;
-            timeSettings.Visible = false;
-            timeleftInfo.Visible = false;
-            timeLabel.Visible = false;
-            saveSettings.Visible = false;
+            timeInpSettings.Visible = false;
+            timeleftInfoLbl.Visible = false;
+            saveSettingsBtn.Visible = false;
 
             settingsBtn.Visible = true;
             quitBtn.Visible = true;
@@ -140,15 +139,15 @@ namespace Matching_Game
             await Task.Delay(700);
 
             GameOverPanelColor(Color.FromArgb(118, 184, 82));
-            GameOverPanelVisibility();
+            GameOverPanelVisibilityLW();
         }
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
             // hasn't lost yet
-            if (timeLeft > 1)
+            if (timeLeft > 800)
             {
-                timeLeft -= 1;
-                timeLabel.Text = $"{timeLeft} seconds";
+                timeLeft -= 100;
+                timeLabel.Text = $"{timeLeft / 1000} seconds";
             }
             // lost
             else
@@ -157,14 +156,17 @@ namespace Matching_Game
                 timeLabel.Text = "Time's up!";
 
                 GameOverPanelColor(Color.FromArgb(255, 75, 43));
-                GameOverPanelVisibility();
+                GameOverPanelVisibilityLW();
             }
         }
 
         // start
-        private void startGame(object sender, EventArgs e)
+        private async void startGame(object sender, EventArgs e)
         {
-            timeLeft = (int)timeSettings.Value;
+            await Task.Delay(250);
+
+            timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
+            timeLabel.Text = $"{timeLeft / 1000} seconds";
 
             icons = new List<string>()
             {
@@ -188,15 +190,11 @@ namespace Matching_Game
         {
             gameoverPanel.BringToFront();
             quitBtn.Visible = true;
-            timeSettings.Visible = true;
-            timeleftInfo.Visible = true;
+            timeInpSettings.Visible = true;
+            timeleftInfoLbl.Visible = true;
+            saveSettingsBtn.Visible = true;
             replayBtn.Visible = false;
             GameOverPanelColor(Color.FromArgb(67, 67, 67));
-        }
-        private void timeSettings_ValueChanged(object sender, EventArgs e)
-        {
-            timeLeft = (int)timeSettings.Value;
-            timeLabel.Text = $"{timeLeft} seconds";
         }
         private void timeSettings_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -206,6 +204,9 @@ namespace Matching_Game
         }
         private void saveSettings_Click(object sender, EventArgs e)
         {
+            timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
+            timeLabel.Text = $"{timeLeft / 1000} seconds";
+
             quitBtn.Visible = false;
             gameoverPanel.SendToBack();
         }
@@ -214,6 +215,5 @@ namespace Matching_Game
         {
             Close();
         }
-
     }
 }

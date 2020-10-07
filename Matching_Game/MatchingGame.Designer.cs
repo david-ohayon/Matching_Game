@@ -55,16 +55,16 @@
             this.playBtn = new FontAwesome.Sharp.IconButton();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameoverPanel = new System.Windows.Forms.Panel();
-            this.timeleftInfo = new System.Windows.Forms.Label();
-            this.saveSettings = new System.Windows.Forms.Button();
-            this.timeSettings = new System.Windows.Forms.NumericUpDown();
+            this.timeleftInfoLbl = new System.Windows.Forms.Label();
+            this.saveSettingsBtn = new System.Windows.Forms.Button();
+            this.timeInpSettings = new System.Windows.Forms.NumericUpDown();
             this.replayBtn = new FontAwesome.Sharp.IconButton();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.matchingTableLayoutPanel.SuspendLayout();
             this.timeLabelPanel.SuspendLayout();
             this.matchingTablePanel.SuspendLayout();
             this.gameoverPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timeSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeInpSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // matchingTableLayoutPanel
@@ -419,9 +419,9 @@
             // gameoverPanel
             // 
             this.gameoverPanel.BackColor = System.Drawing.Color.Black;
-            this.gameoverPanel.Controls.Add(this.timeleftInfo);
-            this.gameoverPanel.Controls.Add(this.saveSettings);
-            this.gameoverPanel.Controls.Add(this.timeSettings);
+            this.gameoverPanel.Controls.Add(this.timeleftInfoLbl);
+            this.gameoverPanel.Controls.Add(this.saveSettingsBtn);
+            this.gameoverPanel.Controls.Add(this.timeInpSettings);
             this.gameoverPanel.Controls.Add(this.replayBtn);
             this.gameoverPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameoverPanel.Location = new System.Drawing.Point(0, 0);
@@ -429,66 +429,65 @@
             this.gameoverPanel.Size = new System.Drawing.Size(1074, 929);
             this.gameoverPanel.TabIndex = 1;
             // 
-            // timeleftInfo
+            // timeleftInfoLbl
             // 
-            this.timeleftInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.timeleftInfo.BackColor = System.Drawing.Color.Transparent;
-            this.timeleftInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeleftInfo.ForeColor = System.Drawing.Color.White;
-            this.timeleftInfo.Location = new System.Drawing.Point(413, 200);
-            this.timeleftInfo.Name = "timeleftInfo";
-            this.timeleftInfo.Size = new System.Drawing.Size(274, 46);
-            this.timeleftInfo.TabIndex = 6;
-            this.timeleftInfo.Text = "time left:";
-            this.timeleftInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timeleftInfoLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.timeleftInfoLbl.BackColor = System.Drawing.Color.Transparent;
+            this.timeleftInfoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeleftInfoLbl.ForeColor = System.Drawing.Color.White;
+            this.timeleftInfoLbl.Location = new System.Drawing.Point(413, 200);
+            this.timeleftInfoLbl.Name = "timeleftInfoLbl";
+            this.timeleftInfoLbl.Size = new System.Drawing.Size(274, 46);
+            this.timeleftInfoLbl.TabIndex = 6;
+            this.timeleftInfoLbl.Text = "time left:";
+            this.timeleftInfoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // saveSettings
+            // saveSettingsBtn
             // 
-            this.saveSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveSettings.ForeColor = System.Drawing.Color.White;
-            this.saveSettings.Location = new System.Drawing.Point(449, 561);
-            this.saveSettings.Name = "saveSettings";
-            this.saveSettings.Size = new System.Drawing.Size(188, 95);
-            this.saveSettings.TabIndex = 5;
-            this.saveSettings.Text = "Save";
-            this.saveSettings.UseVisualStyleBackColor = true;
-            this.saveSettings.Click += new System.EventHandler(this.saveSettings_Click);
+            this.saveSettingsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveSettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveSettingsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSettingsBtn.ForeColor = System.Drawing.Color.White;
+            this.saveSettingsBtn.Location = new System.Drawing.Point(449, 561);
+            this.saveSettingsBtn.Name = "saveSettingsBtn";
+            this.saveSettingsBtn.Size = new System.Drawing.Size(188, 95);
+            this.saveSettingsBtn.TabIndex = 5;
+            this.saveSettingsBtn.Text = "Save";
+            this.saveSettingsBtn.UseVisualStyleBackColor = true;
+            this.saveSettingsBtn.Click += new System.EventHandler(this.saveSettings_Click);
             // 
-            // timeSettings
+            // timeInpSettings
             // 
-            this.timeSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.timeSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(91)))), ((int)(((byte)(119)))));
-            this.timeSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeSettings.ForeColor = System.Drawing.Color.White;
-            this.timeSettings.Increment = new decimal(new int[] {
+            this.timeInpSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.timeInpSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(91)))), ((int)(((byte)(119)))));
+            this.timeInpSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeInpSettings.ForeColor = System.Drawing.Color.White;
+            this.timeInpSettings.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.timeSettings.Location = new System.Drawing.Point(413, 249);
-            this.timeSettings.Maximum = new decimal(new int[] {
+            this.timeInpSettings.Location = new System.Drawing.Point(413, 249);
+            this.timeInpSettings.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
-            this.timeSettings.Minimum = new decimal(new int[] {
+            this.timeInpSettings.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.timeSettings.Name = "timeSettings";
-            this.timeSettings.Size = new System.Drawing.Size(274, 67);
-            this.timeSettings.TabIndex = 4;
-            this.timeSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.timeSettings.Value = new decimal(new int[] {
+            this.timeInpSettings.Name = "timeInpSettings";
+            this.timeInpSettings.Size = new System.Drawing.Size(274, 67);
+            this.timeInpSettings.TabIndex = 4;
+            this.timeInpSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.timeInpSettings.Value = new decimal(new int[] {
             40,
             0,
             0,
             0});
-            this.timeSettings.ValueChanged += new System.EventHandler(this.timeSettings_ValueChanged);
-            this.timeSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeSettings_KeyPress);
+            this.timeInpSettings.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.timeSettings_KeyPress);
             // 
             // replayBtn
             // 
@@ -514,7 +513,6 @@
             // 
             // countdownTimer
             // 
-            this.countdownTimer.Interval = 1000;
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
             // 
             // MatchingGame
@@ -534,7 +532,7 @@
             this.timeLabelPanel.ResumeLayout(false);
             this.matchingTablePanel.ResumeLayout(false);
             this.gameoverPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.timeSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeInpSettings)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,9 +566,9 @@
         private FontAwesome.Sharp.IconButton playBtn;
         private FontAwesome.Sharp.IconButton settingsBtn;
         private FontAwesome.Sharp.IconButton quitBtn;
-        private System.Windows.Forms.NumericUpDown timeSettings;
-        private System.Windows.Forms.Button saveSettings;
-        private System.Windows.Forms.Label timeleftInfo;
+        private System.Windows.Forms.NumericUpDown timeInpSettings;
+        private System.Windows.Forms.Button saveSettingsBtn;
+        private System.Windows.Forms.Label timeleftInfoLbl;
     }
 }
 
