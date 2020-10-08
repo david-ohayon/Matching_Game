@@ -50,16 +50,16 @@
             this.choiceTimer = new System.Windows.Forms.Timer(this.components);
             this.timeLabel = new System.Windows.Forms.Label();
             this.timeLabelPanel = new System.Windows.Forms.Panel();
+            this.settingsBtn = new System.Windows.Forms.Button();
+            this.quitBtn = new System.Windows.Forms.Button();
+            this.playBtn = new System.Windows.Forms.Button();
             this.matchingTablePanel = new System.Windows.Forms.Panel();
             this.gameoverPanel = new System.Windows.Forms.Panel();
+            this.replayBtn = new System.Windows.Forms.Button();
             this.timeleftInfoLbl = new System.Windows.Forms.Label();
             this.saveSettingsBtn = new System.Windows.Forms.Button();
             this.timeInpSettings = new System.Windows.Forms.NumericUpDown();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.replayBtn = new System.Windows.Forms.Button();
-            this.settingsBtn = new System.Windows.Forms.Button();
-            this.quitBtn = new System.Windows.Forms.Button();
-            this.playBtn = new System.Windows.Forms.Button();
             this.matchingTableLayoutPanel.SuspendLayout();
             this.timeLabelPanel.SuspendLayout();
             this.matchingTablePanel.SuspendLayout();
@@ -343,6 +343,53 @@
             this.timeLabelPanel.Size = new System.Drawing.Size(1074, 100);
             this.timeLabelPanel.TabIndex = 2;
             // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsBtn.AutoSize = true;
+            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.settingsBtn.BackgroundImage = global::Matching_Game.Properties.Resources.settings;
+            this.settingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(99, 73);
+            this.settingsBtn.TabIndex = 10;
+            this.settingsBtn.UseVisualStyleBackColor = false;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
+            // quitBtn
+            // 
+            this.quitBtn.AutoSize = true;
+            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.quitBtn.BackgroundImage = global::Matching_Game.Properties.Resources.quit;
+            this.quitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.quitBtn.FlatAppearance.BorderSize = 0;
+            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quitBtn.Location = new System.Drawing.Point(12, 12);
+            this.quitBtn.Name = "quitBtn";
+            this.quitBtn.Size = new System.Drawing.Size(99, 73);
+            this.quitBtn.TabIndex = 9;
+            this.quitBtn.UseVisualStyleBackColor = false;
+            this.quitBtn.Visible = false;
+            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            // 
+            // playBtn
+            // 
+            this.playBtn.AutoSize = true;
+            this.playBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.playBtn.BackgroundImage = global::Matching_Game.Properties.Resources.play;
+            this.playBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playBtn.FlatAppearance.BorderSize = 0;
+            this.playBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playBtn.Location = new System.Drawing.Point(12, 12);
+            this.playBtn.Name = "playBtn";
+            this.playBtn.Size = new System.Drawing.Size(99, 73);
+            this.playBtn.TabIndex = 8;
+            this.playBtn.UseVisualStyleBackColor = false;
+            this.playBtn.Click += new System.EventHandler(this.startGame);
+            // 
             // matchingTablePanel
             // 
             this.matchingTablePanel.BackColor = System.Drawing.Color.Transparent;
@@ -366,6 +413,22 @@
             this.gameoverPanel.Name = "gameoverPanel";
             this.gameoverPanel.Size = new System.Drawing.Size(1074, 929);
             this.gameoverPanel.TabIndex = 1;
+            // 
+            // replayBtn
+            // 
+            this.replayBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.replayBtn.AutoSize = true;
+            this.replayBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
+            this.replayBtn.BackgroundImage = global::Matching_Game.Properties.Resources.replay;
+            this.replayBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.replayBtn.FlatAppearance.BorderSize = 0;
+            this.replayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.replayBtn.Location = new System.Drawing.Point(449, 358);
+            this.replayBtn.Name = "replayBtn";
+            this.replayBtn.Size = new System.Drawing.Size(188, 163);
+            this.replayBtn.TabIndex = 10;
+            this.replayBtn.UseVisualStyleBackColor = false;
+            this.replayBtn.Click += new System.EventHandler(this.startGame);
             // 
             // timeleftInfoLbl
             // 
@@ -431,68 +494,6 @@
             // countdownTimer
             // 
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
-            // 
-            // replayBtn
-            // 
-            this.replayBtn.AutoSize = true;
-            this.replayBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.replayBtn.BackgroundImage = global::Matching_Game.Properties.Resources.replay;
-            this.replayBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.replayBtn.FlatAppearance.BorderSize = 0;
-            this.replayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.replayBtn.Location = new System.Drawing.Point(449, 358);
-            this.replayBtn.Name = "replayBtn";
-            this.replayBtn.Size = new System.Drawing.Size(188, 163);
-            this.replayBtn.TabIndex = 10;
-            this.replayBtn.UseVisualStyleBackColor = false;
-            this.replayBtn.Click += new System.EventHandler(this.startGame);
-            // 
-            // settingsBtn
-            // 
-            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingsBtn.AutoSize = true;
-            this.settingsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.settingsBtn.BackgroundImage = global::Matching_Game.Properties.Resources.settings;
-            this.settingsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.settingsBtn.FlatAppearance.BorderSize = 0;
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Location = new System.Drawing.Point(963, 12);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(99, 73);
-            this.settingsBtn.TabIndex = 10;
-            this.settingsBtn.UseVisualStyleBackColor = false;
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
-            // 
-            // quitBtn
-            // 
-            this.quitBtn.AutoSize = true;
-            this.quitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.quitBtn.BackgroundImage = global::Matching_Game.Properties.Resources.quit;
-            this.quitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.quitBtn.FlatAppearance.BorderSize = 0;
-            this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quitBtn.Location = new System.Drawing.Point(12, 12);
-            this.quitBtn.Name = "quitBtn";
-            this.quitBtn.Size = new System.Drawing.Size(99, 73);
-            this.quitBtn.TabIndex = 9;
-            this.quitBtn.UseVisualStyleBackColor = false;
-            this.quitBtn.Visible = false;
-            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
-            // 
-            // playBtn
-            // 
-            this.playBtn.AutoSize = true;
-            this.playBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(205)))), ((int)(((byte)(235)))));
-            this.playBtn.BackgroundImage = global::Matching_Game.Properties.Resources.play;
-            this.playBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.playBtn.FlatAppearance.BorderSize = 0;
-            this.playBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.playBtn.Location = new System.Drawing.Point(12, 12);
-            this.playBtn.Name = "playBtn";
-            this.playBtn.Size = new System.Drawing.Size(99, 73);
-            this.playBtn.TabIndex = 8;
-            this.playBtn.UseVisualStyleBackColor = false;
-            this.playBtn.Click += new System.EventHandler(this.startGame);
             // 
             // MatchingGame
             // 
