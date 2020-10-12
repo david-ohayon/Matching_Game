@@ -18,6 +18,7 @@ namespace Matching_Game
         private Label secondClicked = null;
 
         private int timeLeft; // milliseconds
+        private bool start;
         private bool lost;
         private bool won;
 
@@ -26,7 +27,17 @@ namespace Matching_Game
         {
             InitializeComponent();
 
+            Setup();
+        }
+        // setup
+        private void Setup()
+        {
             LoadCustomFont();
+            start = true;
+            GameOverPanelColor(Color.FromArgb(67, 67, 67));
+            gameoverPanel.BringToFront();
+            saveSettingsBtn.Visible = false;
+            infoLabel.Text = "Matching Game created by\nDavid Ohayon && Yishai Kehalani";
         }
 
         // load of custom atari looking font
@@ -37,6 +48,7 @@ namespace Matching_Game
             saveSettingsBtn.Font = new Font(pfc.Families[0], saveSettingsBtn.Font.Size);
             timeInpSettings.Font = new Font(pfc.Families[0], timeInpSettings.Font.Size);
             timeleftInfoLbl.Font = new Font(pfc.Families[0], timeleftInfoLbl.Font.Size);
+            infoLabel.Font = new Font(pfc.Families[0], infoLabel.Font.Size);
         }
 
         // color and visibilty of gameover panel
@@ -167,11 +179,14 @@ namespace Matching_Game
         private async void startGame(object sender, EventArgs e)
         {
             await Task.Delay(250);
+            infoLabel.Visible = false;
+
+            start = false;
+            lost = false;
+            won = false;
 
             timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
             timeLabel.Text = $"{timeLeft / 1000} seconds";
-            lost = false;
-            won = false;
 
             icons = new List<string>()
             {
@@ -185,19 +200,21 @@ namespace Matching_Game
 
             countdownTimer.Start();
 
-            playBtn.Visible = false;
             settingsBtn.Visible = false;
             quitBtn.Visible = false;
+            replayBtn.Visible = true;
         }
         //settings
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             gameoverPanel.BringToFront();
+            infoLabel.Visible = false;
             quitBtn.Visible = true;
             timeInpSettings.Visible = true;
             timeleftInfoLbl.Visible = true;
             saveSettingsBtn.Visible = true;
             replayBtn.Visible = false;
+            playBtn.Visible = false;
             GameOverPanelColor(Color.FromArgb(67, 67, 67));
         }
         private void timeInpSettings_KeyPress(object sender, KeyPressEventArgs e)
@@ -211,6 +228,16 @@ namespace Matching_Game
             timeLeft = Convert.ToInt32(timeInpSettings.Value) * 1000 + 800;
             timeLabel.Text = $"{timeLeft / 1000} seconds";
 
+            if (start)
+            {
+                GameOverPanelColor(Color.FromArgb(67, 67, 67));
+                infoLabel.Visible = true;
+                timeInpSettings.Visible = false;
+                timeleftInfoLbl.Visible = false;
+                saveSettingsBtn.Visible = false;
+                playBtn.Visible = true;
+                return;
+            }
             if (lost)
             {
                 GameOverPanelVisibilityLW();
